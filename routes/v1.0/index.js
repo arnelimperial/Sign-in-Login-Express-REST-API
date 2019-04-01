@@ -49,7 +49,7 @@ router.get('/users', async(req, res, next) =>{
 //Get by username
 router.get('/users/:username', async(req, res, next) =>{
   try {
-    let user = await User.find(req.params.username, 'username email updatedAt createdAt');
+    let user = await User.findOne(req.params.username, 'username email updatedAt createdAt');
     res.send({ User: user });
 
   } catch (err) {
