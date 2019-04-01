@@ -7,13 +7,13 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 const apiRouter = require('./routes');
 var http = require('http');
-require('dotenv').config();
+require('dotenv/config');
 
 const app = express();
 
 var mongoose = require('mongoose');
 //var MONGODB_URI = process.env.MONGODB_URI;
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGOLAB_URI, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));

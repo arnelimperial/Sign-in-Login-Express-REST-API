@@ -8,8 +8,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const Auth = require('../../middleware/auth');
-
-require('dotenv').config();
+require('dotenv/config');
 //validation Schema
 
 const userJoiSchema = Joi.object().keys({
