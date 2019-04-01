@@ -6,7 +6,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 const apiRouter = require('./routes');
+var http = require('http');
 require('dotenv').config();
+
 const app = express();
 
 var mongoose = require('mongoose');
@@ -44,5 +46,11 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+var port = process.env.PORT || '3000';
+app.set('port', port);
+var server = http.createServer(app);
+server.listen(port);
 
 module.exports = app;
