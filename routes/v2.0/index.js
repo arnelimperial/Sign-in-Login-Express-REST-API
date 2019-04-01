@@ -30,10 +30,10 @@ router.get('/users', async(req, res, next) =>{
 });
 
 
-//Get by username
-router.get('/users/:id', async(req, res, next) =>{
+
+router.get('/users/:username', async(req, res, next) =>{
   try {
-    let user = await User2.findOne(req.params.username, 'username email updatedAt createdAt');
+    let user = await User.find({ username: req.params.username }, 'username email updatedAt createdAt');
     res.send({ User: user });
 
   } catch (err) {
@@ -41,7 +41,6 @@ router.get('/users/:id', async(req, res, next) =>{
   } 
 
 });
-
 
 
 
