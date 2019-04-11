@@ -124,7 +124,7 @@ router.put('/users/:id', Auth, (req, res, next) =>{
 });
 
 
-router.delete('/users/:id', (req, res, next) =>{
+router.delete('/users/:id', Auth, (req, res, next) =>{
   User2.findByIdAndDelete({_id: req.params.id})
   .exec()
   .then(docs => {
