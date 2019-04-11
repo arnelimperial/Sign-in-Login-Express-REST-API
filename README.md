@@ -1,11 +1,11 @@
 # URI versioning instance in REST API
 
-> REST API with users registration and login features. Other functionalities include encryption of password, error-handling, and authentication using JWT. In partial fulfillment of the requirements for the subject [Mastering the Fundamentals of RESTful API Design of Metropolia Open UAS] (http://opendata.metropolia.fi/koulutushaku/search.php#result-87398).
+REST API with users registration and login features. Other functionalities include encryption of password, error-handling, and authentication using JWT. In partial fulfillment of the requirements for the subject [Mastering the Fundamentals of RESTful API Design of Metropolia Open UAS](http://opendata.metropolia.fi/koulutushaku/search.php#result-87398).
 
-### Version
-```bash 
-1.0.0
-```
+***v1.0.0***
+
+---
+
 
 ## Installation
 
@@ -47,6 +47,7 @@ https://data-api-exp.herokuapp.com/
 - PUT v1.0/users/:id (protected) - Update the users information by ID. Password reset is not yet initiated. Resetting password will cause an error when retrieving information.
 - DELETE /v1.0/users/:id (protected) - Delete user by ID.
 
+---
 
 ### Coded by
 
