@@ -49,6 +49,9 @@ https://data-api-exp.herokuapp.com/
 
 ---
 
+#### License
+zlib
+
 ### Coded by
 
 [Arnel Imperial](https://arnelimperial.bitbucket.io/)
